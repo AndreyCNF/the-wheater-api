@@ -1,0 +1,28 @@
+h1 {
+    font-size: 4rem;
+    color: white;
+}
+h2 {
+    font-size: 2rem;
+    color: white
+}
+.input-search {
+    width: 90%;
+    height: 2rem;
+}
+.input-box {
+    padding: 3rem;
+    border-bottom: 1px solid white;
+}
+.container {
+    width: 95%;
+    margin: 0 auto;
+    text-align:  center;
+}
+thead  th{
+    font-weight: normal;
+}
+
+tbody td {
+    font-weight: bold;
+}

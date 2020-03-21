@@ -1,0 +1,23 @@
+<div class="container" >
+    <h1> Previsão do Tempo</h1>
+    <div class="input-box">
+        <input class="input-search" type="input" placeholder="Insira aqui o nome da cidade"/>
+    </div>
+   <h2>Capitais</h2>
+    <div class="table-box">
+        <table >
+            <thead>
+                <th>Data</th>
+                <th>Min</th>
+                <th>Max</th>
+            </thead>
+            <tbody *ngFor="let f of Forecast">
+                <td>{{f.date}}</td>
+                <td>{{f.min}}</td>
+                <td>{{f.max}}</td>
+                
+
+            </tbody>
+        </table>
+    </div>
+</div>
