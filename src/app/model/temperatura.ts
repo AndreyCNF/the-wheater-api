@@ -4,6 +4,7 @@ export class Temperatura {
      time: string;
     condition_code: string;
     description: string;
+    city_name: string;
 
 
 }

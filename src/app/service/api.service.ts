@@ -11,8 +11,9 @@ const httpOptions = {
 }
 
 const urlTemp = 'https://api.hgbrasil.com/weather?format=json-cors'
-const urlCity = 'http://apiadvisor.climatempo.com.br/api/v1/locale/city?name='
-const key = '&key=d8d37e08'
+const key = '&key=c2b29d24 '
+
+const urlCityName = 'https://api.hgbrasil.com/weather?format=json-cors&key=c2b29d24&city_name='
 
 
 @Injectable({
@@ -29,12 +30,16 @@ export class ApiService {
       
   }
   getForecast():Observable<Forecast[]> {
-    return this.http.get<Forecast[]>(urlTemp + key)
-      .pipe(map((data: any) => data.results.forecast))
-      
+    return this.http.get<Forecast[]>(urlTemp+key)
+      .pipe(map((data: any) => data.results.forecast))  
   }
-  getTempId(id: number): Observable<Temperatura[]> {
-return this.http.get<Temperatura[]>(`${urlTemp}/${id}${key}`)
-.pipe(tap(temperaturas => console.log(temperaturas)))
+
+  getCityName(city: string): Observable<Temperatura[]> {
+return this.http.get<Temperatura[]>(`${urlCityName}/${city}`)
+.pipe(map((data: any) => data.results))
   }
+  getForecasByName(city: string): Observable<Temperatura[]> {
+    return this.http.get<Temperatura[]>(`${urlCityName}/${city}`)
+    .pipe(map((data: any) => data.results.forecast))
+      }
 }

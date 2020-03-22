@@ -1,23 +1,36 @@
 <div class="container" >
     <h1> Previsão do Tempo</h1>
-    <div class="input-box">
-        <input class="input-search" type="input" placeholder="Insira aqui o nome da cidade"/>
+    <div class="details">
+        <div class="details-box">
+            <h3>{{Temperaturas.city_name}}</h3>
+            <div class="condicao-1">
+                <h2>{{Temperaturas.temp}}°C {{Temperaturas.description}}</h2>
+            </div>
+            <div class="condicao-2">
+                <span>Data:</span> 
+                <h4>{{Temperaturas.date}}</h4>
+                <span>Humidade:</span>
+                <h4>{{Temperaturas.humidity}}%</h4>
+                <span>Vento:</span>
+                <h4>{{Temperaturas.wind_speedy}}</h4>
+            </div>
+            
+        </div>
+        <div  class="forecast-box ">
+            <div class="forecast-min-max" *ngFor="let f of Forecast ">
+                {{f.weekday}}
+                <div class="forecast-temps" >
+                    {{f.min}}° {{f.max}}°
+                </div>
+            </div>
+        </div>
     </div>
-   <h2>Capitais</h2>
+    <div class="input-box">
+        <input class="input-search" type="search" placeholder="Insira aqui o nome da cidade e pressione enter" (keyup.enter)="filterbyName($event.target.value)" autofocus />
+    </div>
+   
+  
     <div class="table-box">
-        <table >
-            <thead>
-                <th>Data</th>
-                <th>Min</th>
-                <th>Max</th>
-            </thead>
-            <tbody *ngFor="let f of Forecast">
-                <td>{{f.date}}</td>
-                <td>{{f.min}}</td>
-                <td>{{f.max}}</td>
-                
-
-            </tbody>
-        </table>
+        
     </div>
 </div>

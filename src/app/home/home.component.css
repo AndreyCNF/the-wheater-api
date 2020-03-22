@@ -1,11 +1,12 @@
 h1 {
-    font-size: 4rem;
+    font-size: 2.5em;
     color: white;
 }
 h2 {
     font-size: 2rem;
-    color: white
+    color: #383838;
 }
+
 .input-search {
     width: 90%;
     height: 2rem;
@@ -26,3 +27,55 @@ thead  th{
 tbody td {
     font-weight: bold;
 }
+
+/* Box Details */ 
+
+.details {
+    background-color: white;
+    height: 25rem;
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.condicao-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+span, h4 {
+    padding: .3rem;
+}
+
+.forecast-box {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid rgb(245,168,0);
+    padding: .5rem;
+    justify-content: center;
+    font-weight: bold;
+}
+.forecast-min-max {
+    padding: .7rem;
+}
+.forecast-temps {
+    color:rgb(245,168,0);
+    
+}
+
+/* DESKTOP*/ 
+
+@media (min-width: 576px) {
+    .details {
+        width: 30rem;
+        margin: 0 auto;
+    }
+    .input-search {
+        width: 30rem;
+        height: 2rem;
+    }
+}
+
