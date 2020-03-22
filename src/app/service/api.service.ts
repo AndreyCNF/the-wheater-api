@@ -11,9 +11,9 @@ const httpOptions = {
 }
 
 const urlTemp = 'https://api.hgbrasil.com/weather?format=json-cors'
-const key = '&key=c2b29d24 '
+const key = '&key=3e4732df '
 
-const urlCityName = 'https://api.hgbrasil.com/weather?format=json-cors&key=c2b29d24&city_name='
+const urlCityName = 'https://api.hgbrasil.com/weather?format=json-cors&key=3e4732df&city_name='
 
 
 @Injectable({
