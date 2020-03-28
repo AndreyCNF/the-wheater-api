@@ -7,6 +7,8 @@
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Rocketseat/semana-omnistack-10">
   
 </p>
+<h1> :rocket: Tecnologias
+</h1>
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
